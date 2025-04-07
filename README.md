@@ -1,9 +1,16 @@
 **这个仓库是自己在了解遥感变化检测相关知识的过程中自己复现的完整的任务流程，包括数据的可视化和一些基本任务逻辑的实现**
 性能评估和数据集划分的方法参考了BIT这篇论文，[代码链接](https://github.com/justchenhao/BIT_CD/blob/master/main_cd.py)
-由于笔记本算力有限，只复现了LEVIR数据集的数据，根据BIT论文中提到的模型参数配置
+由于笔记本算力有限，只复现了LEVIR数据集的数据，根据BIT论文中提到的模型参数配置<br>
 ![image](https://github.com/user-attachments/assets/869ab2f9-d18e-49b1-bf92-e2435277f230)
 
-以下是我自己复现的对应结果
+以下是我自己复现的对应结果<br>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/eb4ae54a-aa2a-49c7-a6e3-92e0db27db64" alt="图片1描述" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/d0099f95-31ed-4ebd-b8f3-2352521376ca" alt="图片2描述" width="100%"></td>
+  </tr>
+</table>
 
 ![MF1](https://github.com/user-attachments/assets/eb4ae54a-aa2a-49c7-a6e3-92e0db27db64)
 ![MIOU](https://github.com/user-attachments/assets/d0099f95-31ed-4ebd-b8f3-2352521376ca)
