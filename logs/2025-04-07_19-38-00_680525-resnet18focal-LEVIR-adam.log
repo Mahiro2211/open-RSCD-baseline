@@ -1,0 +1,446 @@
+2025-04-07 19:38:00.681 | INFO     | __main__:<module>:58 - Config(train={'batch_size': 16, 'num_epochs': 20, 'device': 'cuda:0', 'eval_interval': 1, 'multi_losses': False, 'loss_type': 'focal', 'multi_scale_infer': False, 'save_result': True, 'num_classes': 2, 'optimizer': 'adam', 'lr': 1e-05, 'weight_decay': 0.0001, 'momentum': 0.9, 'eps': '1e-8', 'betas': [0.9, 0.999], 'epoch': 20}, model={'name': 'resnet18', 'hidden_dim': 128, 'num_classes': 10, 'img_size': 256}, data={'dataset': 'LEVIR', 'data_path': 'D:\\coding\\open-remote-sensing-detection-baseline\\_dataset_\\data\\LEVIR\\LEVIR-Cropped'})
+2025-04-07 19:38:01.027 | INFO     | trainer.Trainer:load_data:34 - Loading Data
+2025-04-07 19:38:01.030 | INFO     | trainer.Trainer:get_dataloader:45 - Get DataLoader
+2025-04-07 19:38:01.030 | INFO     | trainer.Trainer:configure_loss:83 - Using Focal Loss
+2025-04-07 19:45:46.990 | INFO     | trainer.Trainer:get_optimizer:110 - Using Adam Optimizer
+2025-04-07 19:45:46.994 | INFO     | trainer.BaseTransformerTrainer:start_train:74 - Start Training BASETranformer Model!
+2025-04-07 19:45:46.995 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 1 ......
+2025-04-07 19:52:10.244 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 19:52:10.245 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 1, acc: 0.7183175054828771, miou: 0.4150109205539489, mf1: 0.5238593174291916
+2025-04-07 19:52:10.245 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7066950168647244, F1_0: 0.82814440821279, F1_1: 0.21957422664559303
+2025-04-07 19:52:10.245 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7114166740542179, recall_1: 0.8614349702871961
+2025-04-07 19:52:10.246 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9906958070436478, precision_1: 0.12582284498585802
+2025-04-07 19:52:10.629 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 1 -- Train Loss: 0.015111745955694592
+2025-04-07 19:52:10.630 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 19:52:25.288 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 19:52:26.688 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 19:52:26.689 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 1, acc: 0.7757087498903261, miou: 0.45974741704744077, mf1: 0.5667245481793957
+2025-04-07 19:52:26.689 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7662165709287126, F1_0: 0.8676359760212232, F1_1: 0.2658131203375681
+2025-04-07 19:52:26.690 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7673067257531901, recall_1: 0.9675193110858041
+2025-04-07 19:52:26.690 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9981491846520414, precision_1: 0.15407106976941856
+2025-04-07 19:52:27.603 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:52:27.604 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:52:27.604 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.7757087498903261, miou: 0.45974741704744077, mf1: 0.5667245481793957
+2025-04-07 19:52:27.604 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.7662165709287126, F1_0: 0.8676359760212232, F1_1: 0.2658131203375681
+2025-04-07 19:52:27.604 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.7673067257531901, recall_1: 0.9675193110858041
+2025-04-07 19:52:27.604 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9981491846520414, precision_1: 0.15407106976941856
+2025-04-07 19:52:27.605 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:52:27.605 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:52:27.663 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 2 ......
+2025-04-07 19:57:55.107 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 19:57:55.108 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 2, acc: 0.8495839879753883, miou: 0.5294054907559924, mf1: 0.6348747874691114
+2025-04-07 19:57:55.108 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8430923556120217, F1_0: 0.9148671236883961, F1_1: 0.35488245124982665
+2025-04-07 19:57:55.108 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8470737419198769, recall_1: 0.9017893970851384
+2025-04-07 19:57:55.108 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9944559962121279, precision_1: 0.2209084571918018
+2025-04-07 19:57:55.422 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 2 -- Train Loss: 0.01051562846627798
+2025-04-07 19:57:55.423 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 19:58:10.887 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 19:58:12.222 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 19:58:12.223 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 2, acc: 0.801059171557425, miou: 0.4812961711795465, mf1: 0.5874405065571141
+2025-04-07 19:58:12.223 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7926096953492024, F1_0: 0.8843081064207297, F1_1: 0.29057290669349856
+2025-04-07 19:58:12.224 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.793622022414209, recall_1: 0.9708425151388418
+2025-04-07 19:58:12.224 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9983932459939284, precision_1: 0.17085488149171504
+2025-04-07 19:58:13.111 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:58:13.112 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:58:13.112 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.801059171557425, miou: 0.4812961711795465, mf1: 0.5874405065571141
+2025-04-07 19:58:13.112 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.7926096953492024, F1_0: 0.8843081064207297, F1_1: 0.29057290669349856
+2025-04-07 19:58:13.112 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.793622022414209, recall_1: 0.9708425151388418
+2025-04-07 19:58:13.113 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9983932459939284, precision_1: 0.17085488149171504
+2025-04-07 19:58:13.113 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:58:13.113 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 19:58:13.162 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 3 ......
+2025-04-07 20:04:24.731 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:04:24.731 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 3, acc: 0.8661670427643848, miou: 0.549928093146077, mf1: 0.6557207798217446
+2025-04-07 20:04:24.731 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8602754227527811, F1_0: 0.9248903222282382, F1_1: 0.386551237415251
+2025-04-07 20:04:24.731 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8635955609721703, recall_1: 0.9196821854750036
+2025-04-07 20:04:24.732 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9955509045990971, precision_1: 0.24470066018722322
+2025-04-07 20:04:25.023 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 3 -- Train Loss: 0.009506836262521114
+2025-04-07 20:04:25.025 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:04:41.266 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:04:42.673 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:04:42.674 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 3, acc: 0.7855263650417313, miou: 0.46837481089114025, mf1: 0.5752697265812513
+2025-04-07 20:04:42.674 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7763641514818211, F1_0: 0.8741046690431936, F1_1: 0.276434784119309
+2025-04-07 20:04:42.675 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7771714215472912, recall_1: 0.976262118030338
+2025-04-07 20:04:42.675 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9986638479532018, precision_1: 0.16101338772974436
+2025-04-07 20:04:43.610 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:04:43.610 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:04:43.611 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.801059171557425, miou: 0.4812961711795465, mf1: 0.5874405065571141
+2025-04-07 20:04:43.611 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.7926096953492024, F1_0: 0.8843081064207297, F1_1: 0.29057290669349856
+2025-04-07 20:04:43.612 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.793622022414209, recall_1: 0.976262118030338
+2025-04-07 20:04:43.612 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9986638479532018, precision_1: 0.17085488149171504
+2025-04-07 20:04:43.612 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:04:43.612 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:04:43.677 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 4 ......
+2025-04-07 20:09:52.998 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:09:52.998 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 4, acc: 0.8521634455477252, miou: 0.5353902031149241, mf1: 0.6419929102425281
+2025-04-07 20:09:52.998 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8455234977244777, F1_0: 0.9162965891478699, F1_1: 0.36768923133718623
+2025-04-07 20:09:52.998 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8481563465786135, recall_1: 0.9353537873719783
+2025-04-07 20:09:52.998 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9963420917471787, precision_1: 0.2288192692043704
+2025-04-07 20:09:53.196 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 4 -- Train Loss: 0.010078999110277783
+2025-04-07 20:09:53.197 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:10:07.117 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:10:08.539 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:10:08.540 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 4, acc: 0.6858400404453265, miou: 0.3941701571110196, mf1: 0.5059824589140177
+2025-04-07 20:10:08.541 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.6723307421152391, F1_0: 0.8040642646094822, F1_1: 0.2079006532185532
+2025-04-07 20:10:08.552 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.6728479943712333, recall_1: 0.9824366233490975
+2025-04-07 20:10:08.552 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9988578946442359, precision_1: 0.11625066963582258
+2025-04-07 20:10:09.329 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:10:09.329 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:10:09.330 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.801059171557425, miou: 0.4812961711795465, mf1: 0.5874405065571141
+2025-04-07 20:10:09.330 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.7926096953492024, F1_0: 0.8843081064207297, F1_1: 0.29057290669349856
+2025-04-07 20:10:09.330 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.793622022414209, recall_1: 0.9824366233490975
+2025-04-07 20:10:09.330 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.17085488149171504
+2025-04-07 20:10:09.330 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:10:09.330 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:10:09.401 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 5 ......
+2025-04-07 20:14:28.268 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:14:28.268 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 5, acc: 0.8536923204914906, miou: 0.5373127988172206, mf1: 0.6439624534029988
+2025-04-07 20:14:28.268 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8471035906077761, F1_0: 0.9172236362012663, F1_1: 0.37070127060473135
+2025-04-07 20:14:28.268 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8495739388896966, recall_1: 0.9393474998394099
+2025-04-07 20:14:28.268 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9965791637551608, precision_1: 0.23091432623840438
+2025-04-07 20:14:28.466 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 5 -- Train Loss: 0.009602147103234959
+2025-04-07 20:14:28.467 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:14:39.469 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:14:40.352 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:14:40.352 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 5, acc: 0.8604206740856155, miou: 0.5395503531960101, mf1: 0.6441628831148183
+2025-04-07 20:14:40.352 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8545411183261923, F1_0: 0.921566046648727, F1_1: 0.3667597195809097
+2025-04-07 20:14:40.352 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8559190150108381, recall_1: 0.963189452102714
+2025-04-07 20:14:40.352 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9981196719231236, precision_1: 0.22650345710045555
+2025-04-07 20:14:40.819 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:14:40.820 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:14:40.820 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.8604206740856155, miou: 0.5395503531960101, mf1: 0.6441628831148183
+2025-04-07 20:14:40.820 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.8545411183261923, F1_0: 0.921566046648727, F1_1: 0.3667597195809097
+2025-04-07 20:14:40.820 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.8559190150108381, recall_1: 0.9824366233490975
+2025-04-07 20:14:40.820 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.22650345710045555
+2025-04-07 20:14:40.821 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:14:40.821 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:14:40.852 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 6 ......
+2025-04-07 20:19:08.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:19:08.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 6, acc: 0.8597501690468089, miou: 0.5443358329383883, mf1: 0.6509027641669944
+2025-04-07 20:19:08.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.853426703012986, F1_0: 0.9209176135300167, F1_1: 0.38088791480397227
+2025-04-07 20:19:08.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8558573955628387, recall_1: 0.9407420869559394
+2025-04-07 20:19:08.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9966831981141411, precision_1: 0.23878330703515124
+2025-04-07 20:19:08.606 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 6 -- Train Loss: 0.009040086473641771
+2025-04-07 20:19:08.606 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:19:19.740 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:19:20.589 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:19:20.589 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 6, acc: 0.8260402530431733, miou: 0.5041270690418961, mf1: 0.6095216791135124
+2025-04-07 20:19:20.589 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8186601219969353, F1_0: 0.9002892386742509, F1_1: 0.31875411955277394
+2025-04-07 20:19:20.590 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8197434243060532, recall_1: 0.9697911199896758
+2025-04-07 20:19:20.590 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9983883616203858, precision_1: 0.1907203784936201
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.8604206740856155, miou: 0.5395503531960101, mf1: 0.6441628831148183
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.8545411183261923, F1_0: 0.921566046648727, F1_1: 0.3667597195809097
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.8559190150108381, recall_1: 0.9824366233490975
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.22650345710045555
+2025-04-07 20:19:21.050 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:19:21.051 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:19:21.081 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 7 ......
+2025-04-07 20:23:10.850 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:23:10.851 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 7, acc: 0.8729980833075017, miou: 0.5603860203568771, mf1: 0.6666924246557703
+2025-04-07 20:23:10.851 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8672739432357778, F1_0: 0.9289198202386321, F1_1: 0.40446502907290854
+2025-04-07 20:23:10.851 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8698368030873412, recall_1: 0.938639892803545
+2025-04-07 20:23:10.851 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9966142268010875, precision_1: 0.25776972838128637
+2025-04-07 20:23:11.040 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 7 -- Train Loss: 0.008700700711165922
+2025-04-07 20:23:11.041 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:23:21.863 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:23:22.701 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:23:22.702 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 7, acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:23:22.702 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:23:22.702 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.903788065458101, recall_1: 0.9535156225032956
+2025-04-07 20:23:22.702 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9977521129660746, precision_1: 0.3027085144935256
+2025-04-07 20:23:23.144 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:23:23.144 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:23:23.144 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:23:23.145 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:23:23.145 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:23:23.145 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.3027085144935256
+2025-04-07 20:23:23.145 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:23:23.145 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:23:23.178 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 8 ......
+2025-04-07 20:27:13.287 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:27:13.288 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 8, acc: 0.8796472892332611, miou: 0.5698816200765702, mf1: 0.6762869293969772
+2025-04-07 20:27:13.288 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8741706146738067, F1_0: 0.932861237078629, F1_1: 0.41971262171532536
+2025-04-07 20:27:13.288 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8764555275139368, recall_1: 0.9458143137384243
+2025-04-07 20:27:13.288 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9970266207624272, precision_1: 0.2696962691857535
+2025-04-07 20:27:13.479 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 8 -- Train Loss: 0.00811327686010117
+2025-04-07 20:27:13.479 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:27:24.162 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:27:24.984 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:27:24.984 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 8, acc: 0.8968726694583877, miou: 0.5862979748500133, mf1: 0.6903859946393777
+2025-04-07 20:27:24.984 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8925632093418274, F1_0: 0.9432320661230478, F1_1: 0.4375399231557075
+2025-04-07 20:27:24.985 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8942904414233869, recall_1: 0.9558225844364707
+2025-04-07 20:27:24.985 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9978407925016065, precision_1: 0.28370470393392017
+2025-04-07 20:27:25.426 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.3027085144935256
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:27:25.427 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:27:25.459 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 9 ......
+2025-04-07 20:32:14.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:32:14.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 9, acc: 0.8855965282140151, miou: 0.5777583657861742, mf1: 0.6839550246849355
+2025-04-07 20:32:14.407 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8804037788627433, F1_0: 0.9363985894153781, F1_1: 0.4315114599544929
+2025-04-07 20:32:14.408 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8827652131712505, recall_1: 0.9443451210121677
+2025-04-07 20:32:14.408 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9969707773971193, precision_1: 0.2796470812800416
+2025-04-07 20:32:14.589 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 9 -- Train Loss: 0.007794963860402951
+2025-04-07 20:32:14.589 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:32:25.316 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:32:26.190 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:32:26.191 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 9, acc: 0.8611434847116455, miou: 0.5406066159412057, mf1: 0.6452934134895232
+2025-04-07 20:32:26.191 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8552779479415121, F1_0: 0.9219943501420372, F1_1: 0.3685924768370092
+2025-04-07 20:32:26.191 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8565597885392902, recall_1: 0.9657850949735021
+2025-04-07 20:32:26.191 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9982533341282535, precision_1: 0.22775831107653444
+2025-04-07 20:32:26.639 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:32:26.639 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:32:26.639 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:32:26.639 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:32:26.640 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:32:26.640 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.3027085144935256
+2025-04-07 20:32:26.640 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:32:26.640 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:32:26.671 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 10 ......
+2025-04-07 20:36:19.250 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:36:19.250 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 10, acc: 0.8966840036799396, miou: 0.5936721324048733, mf1: 0.6994607154509449
+2025-04-07 20:36:19.251 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8920077791249363, F1_0: 0.9429218344093261, F1_1: 0.4559995964925637
+2025-04-07 20:36:19.251 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8944092923175045, recall_1: 0.943999409450929
+2025-04-07 20:36:19.251 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9969989396516827, precision_1: 0.3006030990952556
+2025-04-07 20:36:19.442 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 10 -- Train Loss: 0.007437848047552149
+2025-04-07 20:36:19.443 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:36:30.240 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:36:31.084 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:36:31.085 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 10, acc: 0.7884820699691758, miou: 0.4710341328758287, mf1: 0.5779140021723017
+2025-04-07 20:36:31.085 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7794193587797557, F1_0: 0.87603779593004, F1_1: 0.2797902084145634
+2025-04-07 20:36:31.085 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7801351371571391, recall_1: 0.9790349463720595
+2025-04-07 20:36:31.085 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.998824218529388, precision_1: 0.16321738718633158
+2025-04-07 20:36:31.531 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:36:31.532 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:36:31.532 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:36:31.532 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:36:31.532 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:36:31.533 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.3027085144935256
+2025-04-07 20:36:31.533 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:36:31.533 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:36:31.566 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 11 ......
+2025-04-07 20:40:22.008 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:40:22.008 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 11, acc: 0.902899030621132, miou: 0.6041069711677041, mf1: 0.7097503197411007
+2025-04-07 20:40:22.008 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8984754258749222, F1_0: 0.9465230439075483, F1_1: 0.4729775955746531
+2025-04-07 20:40:22.008 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.9008469249328696, recall_1: 0.9453712103109425
+2025-04-07 20:40:22.008 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9970785723457463, precision_1: 0.31538337703278563
+2025-04-07 20:40:22.201 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 11 -- Train Loss: 0.007217661841782961
+2025-04-07 20:40:22.201 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:40:32.920 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:40:33.748 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:40:33.748 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 11, acc: 0.8176257908344254, miou: 0.4967812905409328, mf1: 0.602681317206897
+2025-04-07 20:40:33.748 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8098181363084018, F1_0: 0.8949165296875659, F1_1: 0.3104461047262281
+2025-04-07 20:40:33.748 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8105889501508137, recall_1: 0.978270456754986
+2025-04-07 20:40:33.748 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9988271252002237, precision_1: 0.1844974469610223
+2025-04-07 20:40:34.193 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988578946442359, precision_1: 0.3027085144935256
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:40:34.194 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:40:34.226 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 12 ......
+2025-04-07 20:44:26.515 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:44:26.515 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 12, acc: 0.9079320028926547, miou: 0.6125987130376879, mf1: 0.7179799791206934
+2025-04-07 20:44:26.515 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.9037329973385643, F1_0: 0.9494324487695427, F1_1: 0.48652750947184414
+2025-04-07 20:44:26.515 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.90600341179634, recall_1: 0.9479156498074777
+2025-04-07 20:44:26.516 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9972347615971097, precision_1: 0.3272446306569453
+2025-04-07 20:44:26.713 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 12 -- Train Loss: 0.006873653478543745
+2025-04-07 20:44:26.714 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:44:37.619 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:44:38.436 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:44:38.436 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 12, acc: 0.794892087578772, miou: 0.47654628327327886, mf1: 0.583218824097455
+2025-04-07 20:44:38.436 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.786096621254862, F1_0: 0.8802396907549649, F1_1: 0.2861979574399451
+2025-04-07 20:44:38.436 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.786791314696435, recall_1: 0.9798253569097303
+2025-04-07 20:44:38.436 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9988780585699728, precision_1: 0.16757213422599238
+2025-04-07 20:44:38.885 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:44:38.885 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:44:38.886 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:44:38.886 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:44:38.886 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:44:38.886 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988780585699728, precision_1: 0.3027085144935256
+2025-04-07 20:44:38.886 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:44:38.886 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:44:38.920 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 13 ......
+2025-04-07 20:48:29.536 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:48:29.536 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 13, acc: 0.9017382868220295, miou: 0.6024739551380238, mf1: 0.7082183854097515
+2025-04-07 20:48:29.536 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8972509450822802, F1_0: 0.9458431326833441, F1_1: 0.47059363813615873
+2025-04-07 20:48:29.536 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8992595152204222, recall_1: 0.9533706947638194
+2025-04-07 20:48:29.536 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9975168196516503, precision_1: 0.3123983861728295
+2025-04-07 20:48:29.740 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 13 -- Train Loss: 0.006749923052684812
+2025-04-07 20:48:29.741 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:48:40.649 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:48:41.488 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:48:41.488 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 13, acc: 0.7882570177316651, miou: 0.4709128391854166, mf1: 0.5778383676713748
+2025-04-07 20:48:41.489 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7791744345042217, F1_0: 0.8758830693313148, F1_1: 0.2797936660114346
+2025-04-07 20:48:41.489 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7798538606445647, recall_1: 0.9800934431433069
+2025-04-07 20:48:41.489 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9988831136008438, precision_1: 0.16319035779014446
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9988831136008438, precision_1: 0.3027085144935256
+2025-04-07 20:48:41.943 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:48:41.944 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:48:41.975 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 14 ......
+2025-04-07 20:52:31.509 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:52:31.509 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 14, acc: 0.8956138503685424, miou: 0.5934990701895645, mf1: 0.6996306999989557
+2025-04-07 20:52:31.509 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8908177311367259, F1_0: 0.9422565277349151, F1_1: 0.45700487226299613
+2025-04-07 20:52:31.509 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8926156860253269, recall_1: 0.9580015376741806
+2025-04-07 20:52:31.509 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9977439717366564, precision_1: 0.3000767402632318
+2025-04-07 20:52:31.709 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 14 -- Train Loss: 0.006702725422893013
+2025-04-07 20:52:31.710 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:52:42.522 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:52:43.357 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:52:43.357 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 14, acc: 0.8040183186531052, miou: 0.4845429386244734, mf1: 0.590916496814031
+2025-04-07 20:52:43.357 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.7956110855894691, F1_0: 0.8861730016514477, F1_1: 0.2956599919766144
+2025-04-07 20:52:43.358 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7963020351049374, recall_1: 0.9801740465539319
+2025-04-07 20:52:43.358 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9989105826703737, precision_1: 0.17408563549430342
+2025-04-07 20:52:43.808 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:52:43.808 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:52:43.808 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:52:43.808 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:52:43.808 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9824366233490975
+2025-04-07 20:52:43.808 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989105826703737, precision_1: 0.3027085144935256
+2025-04-07 20:52:43.809 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:52:43.809 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:52:43.842 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 15 ......
+2025-04-07 20:56:34.555 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 20:56:34.556 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 15, acc: 0.8982598636927227, miou: 0.5980528628641396, mf1: 0.7041660258383362
+2025-04-07 20:56:34.556 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8935624660552958, F1_0: 0.9437897358091352, F1_1: 0.4645423158675372
+2025-04-07 20:56:34.556 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8953090931836913, recall_1: 0.9594595230501923
+2025-04-07 20:56:34.556 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.997821512107706, precision_1: 0.30646090172612966
+2025-04-07 20:56:34.752 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 15 -- Train Loss: 0.006687483498094122
+2025-04-07 20:56:34.752 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 20:56:45.668 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 20:56:46.537 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 20:56:46.537 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 15, acc: 0.6230238080024708, miou: 0.35278265241077883, mf1: 0.46754399744382
+2025-04-07 20:56:46.537 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.6067739391165294, F1_0: 0.7552697729378128, F1_1: 0.17981822194982722
+2025-04-07 20:56:46.538 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.6071799298351653, recall_1: 0.9847251210648608
+2025-04-07 20:56:46.538 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9988992379209511, precision_1: 0.09894298929531603
+2025-04-07 20:56:46.977 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9058749079704269, miou: 0.600128934751281, mf1: 0.7039899548815197
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9019515202507241, F1_0: 0.9484484268954061, F1_1: 0.45953148286763335
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.903788065458101, recall_1: 0.9847251210648608
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989105826703737, precision_1: 0.3027085144935256
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:56:46.978 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 20:56:47.010 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 16 ......
+2025-04-07 21:02:02.075 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 21:02:02.075 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 16, acc: 0.8909801890341081, miou: 0.5870309012847366, mf1: 0.6934337333324749
+2025-04-07 21:02:02.075 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8859479393508691, F1_0: 0.9395252804728235, F1_1: 0.44734218619212646
+2025-04-07 21:02:02.076 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.88756365517697, recall_1: 0.9620588616681819
+2025-04-07 21:02:02.076 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9979494714564157, precision_1: 0.2914251739189413
+2025-04-07 21:02:02.394 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 16 -- Train Loss: 0.006743359395166796
+2025-04-07 21:02:02.396 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 21:02:18.030 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 21:02:19.350 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 21:02:19.351 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 16, acc: 0.9323536157608016, miou: 0.6478229724770798, mf1: 0.7497169378379738
+2025-04-07 21:02:19.351 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.9296040607559592, F1_0: 0.9635178762518111, F1_1: 0.5359159994241364
+2025-04-07 21:02:19.351 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.9324248732428094, recall_1: 0.9307268723248683
+2025-04-07 21:02:19.351 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9967562206121792, precision_1: 0.37629368733981694
+2025-04-07 21:02:19.965 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:02:19.966 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:02:19.966 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9323536157608016, miou: 0.6478229724770798, mf1: 0.7497169378379738
+2025-04-07 21:02:19.967 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9296040607559592, F1_0: 0.9635178762518111, F1_1: 0.5359159994241364
+2025-04-07 21:02:19.967 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.9324248732428094, recall_1: 0.9847251210648608
+2025-04-07 21:02:19.967 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989105826703737, precision_1: 0.37629368733981694
+2025-04-07 21:02:19.967 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:02:19.967 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:02:20.001 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 17 ......
+2025-04-07 21:08:26.484 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 21:08:26.484 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 17, acc: 0.886312711908576, miou: 0.5797960361529799, mf1: 0.6862263564019957
+2025-04-07 21:08:26.485 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8810948131703046, F1_0: 0.9367893113614971, F1_1: 0.43566340144249416
+2025-04-07 21:08:26.485 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8829512873892758, recall_1: 0.9561958465617098
+2025-04-07 21:08:26.485 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9976193563038852, precision_1: 0.28209629980014905
+2025-04-07 21:08:26.811 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 17 -- Train Loss: 0.0073511857031896876
+2025-04-07 21:08:26.811 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 21:08:42.715 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 21:08:44.009 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 21:08:44.009 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 17, acc: 0.8998361527919754, miou: 0.5918258876498844, mf1: 0.6960943745879534
+2025-04-07 21:08:44.010 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8956055858235284, F1_0: 0.9449281392601702, F1_1: 0.4472606099157367
+2025-04-07 21:08:44.010 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8969523804961319, recall_1: 0.9656700486957818
+2025-04-07 21:08:44.010 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9983262611191902, precision_1: 0.2910263445587102
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9323536157608016, miou: 0.6478229724770798, mf1: 0.7497169378379738
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9296040607559592, F1_0: 0.9635178762518111, F1_1: 0.5359159994241364
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.9324248732428094, recall_1: 0.9847251210648608
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989105826703737, precision_1: 0.37629368733981694
+2025-04-07 21:08:44.614 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:08:44.615 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:08:44.669 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 18 ......
+2025-04-07 21:14:54.915 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 21:14:54.916 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 18, acc: 0.8946095027280655, miou: 0.5926362649521147, mf1: 0.6989450856066107
+2025-04-07 21:14:54.916 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8897342343732116, F1_0: 0.9416500606804367, F1_1: 0.45624011053278474
+2025-04-07 21:14:54.916 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8913999034469279, recall_1: 0.9611741347751799
+2025-04-07 21:14:54.916 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9979042247868646, precision_1: 0.2991090699426933
+2025-04-07 21:14:55.228 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 18 -- Train Loss: 0.0066417346551512066
+2025-04-07 21:14:55.229 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 21:15:10.694 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 21:15:12.109 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 21:15:12.110 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 18, acc: 0.8930405378341659, miou: 0.5822227837410802, mf1: 0.6867483103246728
+2025-04-07 21:15:12.110 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8884950966788105, F1_0: 0.940955623498643, F1_1: 0.4325409971507026
+2025-04-07 21:15:12.110 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8896089388568242, recall_1: 0.9713808180926194
+2025-04-07 21:15:12.111 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9985927932381145, precision_1: 0.2782123806110581
+2025-04-07 21:15:12.938 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:15:12.939 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:15:12.939 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9323536157608016, miou: 0.6478229724770798, mf1: 0.7497169378379738
+2025-04-07 21:15:12.940 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9296040607559592, F1_0: 0.9635178762518111, F1_1: 0.5359159994241364
+2025-04-07 21:15:12.940 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.9324248732428094, recall_1: 0.9847251210648608
+2025-04-07 21:15:12.940 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989105826703737, precision_1: 0.37629368733981694
+2025-04-07 21:15:12.940 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:15:12.940 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:15:13.011 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 19 ......
+2025-04-07 21:19:52.815 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 21:19:52.815 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 19, acc: 0.8884063699272239, miou: 0.5834261094761346, mf1: 0.6899458987051457
+2025-04-07 21:19:52.815 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8832486265285586, F1_0: 0.9380052725532548, F1_1: 0.4418865248570366
+2025-04-07 21:19:52.815 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8848114267256162, recall_1: 0.9631917506474015
+2025-04-07 21:19:52.815 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9980042682680572, precision_1: 0.2867109296260445
+2025-04-07 21:19:53.005 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 19 -- Train Loss: 0.006841029679360852
+2025-04-07 21:19:53.005 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 21:20:03.742 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 21:20:04.580 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 21:20:04.581 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 19, acc: 0.7564666867256151, miou: 0.4453521156379775, mf1: 0.5536735400549891
+2025-04-07 21:20:04.581 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.746001439609335, F1_0: 0.854525513826374, F1_1: 0.2528215662836043
+2025-04-07 21:20:04.581 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.7465959771485995, recall_1: 0.9818059993082604
+2025-04-07 21:20:04.581 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9989336724670664, precision_1: 0.14509185694471408
+2025-04-07 21:20:05.029 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:20:05.029 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:20:05.030 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9323536157608016, miou: 0.6478229724770798, mf1: 0.7497169378379738
+2025-04-07 21:20:05.030 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9296040607559592, F1_0: 0.9635178762518111, F1_1: 0.5359159994241364
+2025-04-07 21:20:05.030 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.9324248732428094, recall_1: 0.9847251210648608
+2025-04-07 21:20:05.030 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989336724670664, precision_1: 0.37629368733981694
+2025-04-07 21:20:05.030 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:20:05.030 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:20:05.060 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:99 - Training Epoch 20 ......
+2025-04-07 21:23:54.986 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:187 - >>>>>>>>>>>>>TRAIN METRIC<<<<<<<<<<<<<<
+2025-04-07 21:23:54.987 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 20, acc: 0.8856235975629826, miou: 0.5795953101312636, mf1: 0.6862321018650944
+2025-04-07 21:23:54.987 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8803308028095824, F1_0: 0.9363573108192245, F1_1: 0.43610689291096444
+2025-04-07 21:23:54.987 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.8819446235145144, recall_1: 0.9619615292055217
+2025-04-07 21:23:54.987 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9979257252237873, precision_1: 0.2819690465244314
+2025-04-07 21:23:55.180 | INFO     | trainer.BaseTransformerTrainer:start_train:79 - Epoch: 20 -- Train Loss: 0.007017313686900594
+2025-04-07 21:23:55.180 | INFO     | trainer.BaseTransformerTrainer:start_train:95 - Starting Validate....
+2025-04-07 21:24:05.944 | INFO     | trainer.BaseTransformerTrainer:validate:151 - Calculating val Metric
+2025-04-07 21:24:06.829 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:189 - >>>>>>>>>>>>>VAL METRIC<<<<<<<<<<<<<<
+2025-04-07 21:24:06.829 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:190 - Epoch: 20, acc: 0.8141447752714143, miou: 0.49337269369357706, mf1: 0.5992812117356944
+2025-04-07 21:24:06.829 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:191 - iou_0: 0.8062099264629781, F1_0: 0.8927089386764875, F1_1: 0.30585348479490126
+2025-04-07 21:24:06.830 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:192 - recall_0: 0.807068218699984, recall_1: 0.9756961187504425
+2025-04-07 21:24:06.830 | INFO     | trainer.BaseTransformerTrainer:get_all_metric:193 - precision_0: 0.9986826405275959, precision_1: 0.181350997653824
+2025-04-07 21:24:07.273 | INFO     | trainer.BaseTransformerTrainer:update_best_result:60 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:24:07.273 | INFO     | trainer.BaseTransformerTrainer:update_best_result:61 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:24:07.274 | INFO     | trainer.BaseTransformerTrainer:update_best_result:65 - acc: 0.9323536157608016, miou: 0.6478229724770798, mf1: 0.7497169378379738
+2025-04-07 21:24:07.274 | INFO     | trainer.BaseTransformerTrainer:update_best_result:66 - iou_0: 0.9296040607559592, F1_0: 0.9635178762518111, F1_1: 0.5359159994241364
+2025-04-07 21:24:07.274 | INFO     | trainer.BaseTransformerTrainer:update_best_result:67 - recall_0: 0.9324248732428094, recall_1: 0.9847251210648608
+2025-04-07 21:24:07.274 | INFO     | trainer.BaseTransformerTrainer:update_best_result:68 - precision_0: 0.9989336724670664, precision_1: 0.37629368733981694
+2025-04-07 21:24:07.274 | INFO     | trainer.BaseTransformerTrainer:update_best_result:69 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<
+2025-04-07 21:24:07.274 | INFO     | trainer.BaseTransformerTrainer:update_best_result:70 - >>>>>>>>>>>>>BEST RESULT<<<<<<<<<<<<<<

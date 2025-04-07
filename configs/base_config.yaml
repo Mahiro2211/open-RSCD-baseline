@@ -1,0 +1,26 @@
+train:
+  batch_size: 16
+  num_epochs: 20
+  device: "cuda:0"
+  eval_interval: 1
+  multi_losses: False
+  loss_type: "ce"
+  multi_scale_infer: False
+  save_result: True
+  num_classes: 2
+  optimizer: "adam"  # 可选: "sgd", "adam", "rmsprop", "adamw"
+  lr: 0.00001
+  weight_decay: 0.0001
+  momentum: 0.9  # 仅对 SGD 生效
+  eps: 1e-8  # 仅对 Adam/AdamW 生效
+  betas: [ 0.9, 0.999 ]  # 仅对 Adam/AdamW 生效
+
+model:
+  name: "resnet18"
+  hidden_dim: 128
+  num_classes: 10
+  img_size: 256
+
+data:
+  dataset: "LEVIR"
+  data_path: "D:\\coding\\open-remote-sensing-detection-baseline\\_dataset_\\data\\LEVIR\\LEVIR-Cropped"
