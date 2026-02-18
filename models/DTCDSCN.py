@@ -1,12 +1,12 @@
 import math
-import torch
-import torch.nn as nn
-from torchvision.models import ResNet
-import torch.nn.functional as F
 from functools import partial
 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
-nonlinearity = partial(F.relu,inplace=True)
+nonlinearity = partial(F.relu, inplace=True)
+
 
 class SELayer(nn.Module):
     def __init__(self, channel, reduction=16):
@@ -16,7 +16,7 @@ class SELayer(nn.Module):
             nn.Linear(channel, channel // reduction, bias=False),
             nn.ReLU(inplace=True),
             nn.Linear(channel // reduction, channel, bias=False),
-            nn.Sigmoid()
+            nn.Sigmoid(),
         )
 
     def forward(self, x):
@@ -25,6 +25,7 @@ class SELayer(nn.Module):
         y = self.fc(y).view(b, c, 1, 1)
         return x * y.expand_as(x)
 
+
 class Dblock_more_dilate(nn.Module):
     def __init__(self, channel):
         super(Dblock_more_dilate, self).__init__()
@@ -32,7 +33,9 @@ class Dblock_more_dilate(nn.Module):
         self.dilate2 = nn.Conv2d(channel, channel, kernel_size=3, dilation=2, padding=2)
         self.dilate3 = nn.Conv2d(channel, channel, kernel_size=3, dilation=4, padding=4)
         self.dilate4 = nn.Conv2d(channel, channel, kernel_size=3, dilation=8, padding=8)
-        self.dilate5 = nn.Conv2d(channel, channel, kernel_size=3, dilation=16, padding=16)
+        self.dilate5 = nn.Conv2d(
+            channel, channel, kernel_size=3, dilation=16, padding=16
+        )
         for m in self.modules():
             if isinstance(m, nn.Conv2d) or isinstance(m, nn.ConvTranspose2d):
                 if m.bias is not None:
@@ -46,6 +49,8 @@ class Dblock_more_dilate(nn.Module):
         dilate5_out = nonlinearity(self.dilate5(dilate4_out))
         out = x + dilate1_out + dilate2_out + dilate3_out + dilate4_out + dilate5_out
         return out
+
+
 class Dblock(nn.Module):
     def __init__(self, channel):
         super(Dblock, self).__init__()
@@ -68,8 +73,12 @@ class Dblock(nn.Module):
         out = x + dilate1_out + dilate2_out + dilate3_out + dilate4_out  # + dilate5_out
         return out
 
+
 def conv3x3(in_planes, out_planes, stride=1):
-    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride, padding=1, bias=False)
+    return nn.Conv2d(
+        in_planes, out_planes, kernel_size=3, stride=stride, padding=1, bias=False
+    )
+
 
 class SEBasicBlock(nn.Module):
     expansion = 1
@@ -103,16 +112,19 @@ class SEBasicBlock(nn.Module):
 
         return out
 
+
 class DecoderBlock(nn.Module):
     def __init__(self, in_channels, n_filters):
-        super(DecoderBlock,self).__init__()
+        super(DecoderBlock, self).__init__()
 
         self.conv1 = nn.Conv2d(in_channels, in_channels // 4, 1)
         self.norm1 = nn.BatchNorm2d(in_channels // 4)
         self.relu1 = nonlinearity
         self.scse = SCSEBlock(in_channels // 4)
 
-        self.deconv2 = nn.ConvTranspose2d(in_channels // 4, in_channels // 4, 3, stride=2, padding=1, output_padding=1)
+        self.deconv2 = nn.ConvTranspose2d(
+            in_channels // 4, in_channels // 4, 3, stride=2, padding=1, output_padding=1
+        )
         self.norm2 = nn.BatchNorm2d(in_channels // 4)
         self.relu2 = nonlinearity
 
@@ -134,25 +146,41 @@ class DecoderBlock(nn.Module):
         x = self.relu3(x)
         return x
 
+
 class SCSEBlock(nn.Module):
     def __init__(self, channel, reduction=16):
         super(SCSEBlock, self).__init__()
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
 
-        '''self.channel_excitation = nn.Sequential(nn.(channel, int(channel//reduction)),
+        """self.channel_excitation = nn.Sequential(nn.(channel, int(channel//reduction)),
                                                 nn.ReLU(inplace=True),
                                                 nn.Linear(int(channel//reduction), channel),
-                                                nn.Sigmoid())'''
-        self.channel_excitation = nn.Sequential(nn.Conv2d(channel, int(channel//reduction), kernel_size=1,
-                                                  stride=1, padding=0, bias=False),
-                                                nn.ReLU(inplace=True),
-                                                nn.Conv2d(int(channel // reduction), channel,kernel_size=1,
-                                                  stride=1, padding=0, bias=False),
-                                                nn.Sigmoid())
+                                                nn.Sigmoid())"""
+        self.channel_excitation = nn.Sequential(
+            nn.Conv2d(
+                channel,
+                int(channel // reduction),
+                kernel_size=1,
+                stride=1,
+                padding=0,
+                bias=False,
+            ),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(
+                int(channel // reduction),
+                channel,
+                kernel_size=1,
+                stride=1,
+                padding=0,
+                bias=False,
+            ),
+            nn.Sigmoid(),
+        )
 
-        self.spatial_se = nn.Sequential(nn.Conv2d(channel, 1, kernel_size=1,
-                                                  stride=1, padding=0, bias=False),
-                                        nn.Sigmoid())
+        self.spatial_se = nn.Sequential(
+            nn.Conv2d(channel, 1, kernel_size=1, stride=1, padding=0, bias=False),
+            nn.Sigmoid(),
+        )
 
     def forward(self, x):
         bahs, chs, _, _ = x.size()
@@ -165,14 +193,18 @@ class SCSEBlock(nn.Module):
         spa_se = torch.mul(x, spa_se)
         return torch.add(chn_se, 1, spa_se)
 
+
 class CDNet_model(nn.Module):
-    def __init__(self, in_channels=3, block=SEBasicBlock, layers=[3, 4, 6, 3], num_classes=2):
+    def __init__(
+        self, in_channels=3, block=SEBasicBlock, layers=[3, 4, 6, 3], num_classes=2
+    ):
         super(CDNet_model, self).__init__()
 
         filters = [64, 128, 256, 512]
         self.inplanes = 64
-        self.firstconv = nn.Conv2d(in_channels, 64, kernel_size=7, stride=2, padding=3,
-                                   bias=False)
+        self.firstconv = nn.Conv2d(
+            in_channels, 64, kernel_size=7, stride=2, padding=3, bias=False
+        )
         self.firstbn = nn.BatchNorm2d(64)
         self.firstrelu = nn.ReLU(inplace=True)
         self.firstmaxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
@@ -209,7 +241,7 @@ class CDNet_model(nn.Module):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
-                m.weight.data.normal_(0, math.sqrt(2. / n))
+                m.weight.data.normal_(0, math.sqrt(2.0 / n))
             elif isinstance(m, nn.BatchNorm2d):
                 m.weight.data.fill_(1)
                 m.bias.data.zero_()
@@ -218,8 +250,13 @@ class CDNet_model(nn.Module):
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion:
             downsample = nn.Sequential(
-                nn.Conv2d(self.inplanes, planes * block.expansion,
-                          kernel_size=1, stride=stride, bias=False),
+                nn.Conv2d(
+                    self.inplanes,
+                    planes * block.expansion,
+                    kernel_size=1,
+                    stride=stride,
+                    bias=False,
+                ),
                 nn.BatchNorm2d(planes * block.expansion),
             )
 
@@ -303,9 +340,7 @@ class CDNet_model(nn.Module):
         return output
 
 
-
 def CDNet34(in_channels, **kwargs):
-
     model = CDNet_model(in_channels, SEBasicBlock, [3, 4, 6, 3], **kwargs)
 
     return model
