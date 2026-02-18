@@ -1,0 +1,4 @@
+_*/
+logs/
+*/__*
+tensorboard_log/
