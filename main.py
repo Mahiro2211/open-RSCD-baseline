@@ -17,7 +17,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Model Parameter Config")
 
     # 允许传递超参数
-    parser.add_argument("--config", type=str, default='D:\\coding\\open-remote-sensing-detection-baseline\\configs\\base_config.yaml', help="Path to config file")
+    parser.add_argument("--config", type=str, default='./configs/base_config.yaml', help="Path to config file")
     parser.add_argument("--lr", type=float, help="Learning rate")
     parser.add_argument("--batch_size", type=int, help="Batch size")
     parser.add_argument("--device", type=str, help="Training device (cuda/cpu)")

@@ -23,4 +23,4 @@ model:
 
 data:
   dataset: "LEVIR"
-  data_path: "D:\\coding\\open-remote-sensing-detection-baseline\\_dataset_\\data\\LEVIR\\LEVIR-Cropped"
+  data_path: "/home/dhm/dataset/LEVIR"
