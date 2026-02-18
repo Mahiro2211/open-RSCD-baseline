@@ -1,0 +1,7 @@
+2026-02-18 21:37:14.373 | INFO     | __main__:<module>:83 - Config(train={'batch_size': 16, 'num_epochs': 20, 'device': 'cuda:0', 'eval_interval': 1, 'multi_losses': False, 'loss_type': 'ce', 'multi_scale_infer': False, 'save_result': True, 'num_classes': 2, 'optimizer': 'adam', 'lr': 1e-05, 'weight_decay': 0.0001, 'momentum': 0.9, 'eps': '1e-8', 'betas': [0.9, 0.999], 'epoch': 20}, model={'name': 'resnet18', 'hidden_dim': 128, 'num_classes': 10, 'img_size': 256}, data={'dataset': 'LEVIR', 'data_path': '/home/dhm/dataset/LEVIR'})
+2026-02-18 21:37:15.512 | INFO     | trainer.Trainer:load_data:35 - Loading Data
+2026-02-18 21:37:15.514 | INFO     | trainer.Trainer:get_dataloader:53 - Get DataLoader
+2026-02-18 21:37:15.514 | INFO     | trainer.Trainer:configure_loss:87 - Using CrossEntropy Loss
+2026-02-18 21:37:15.514 | INFO     | trainer.Trainer:get_optimizer:121 - Using Adam Optimizer
+2026-02-18 21:37:15.515 | INFO     | trainer.BaseTransformerTrainer:start_train:83 - Start Training BASETranformer Model!
+2026-02-18 21:37:15.516 | INFO     | trainer.BaseTransformerTrainer:train_one_epoch:112 - Training Epoch 1 ......
